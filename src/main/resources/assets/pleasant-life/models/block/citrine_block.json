@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "pleasant-life:block/citrine_block"
+  }
+}
