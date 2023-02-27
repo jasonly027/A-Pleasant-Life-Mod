@@ -1,11 +1,17 @@
 package hikoir.pleasantlife.item;
 
 import hikoir.pleasantlife.PleasantLife;
+import hikoir.pleasantlife.block.ModBlocks;
+import hikoir.pleasantlife.item.custom.KnifeItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.Material;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
@@ -33,6 +39,11 @@ public class ModItems {
     public static final Item NETHERITE_KNIFE = registerItem("netherite_knife",
             new KnifeItem(ToolMaterials.NETHERITE, 1, -2.2f, new Item.Settings()));
 
+    public static final Item STRAWBERRY = registerItem("strawberry",
+            new Item(new FabricItemSettings().food(ModFoodComponents.STRAWBERRY)));
+
+    public static final Item STRAWBERRY_SEEDS = registerItem("strawberry_seeds",
+            new AliasedBlockItem(ModBlocks.STRAWBERRY_BUSH, new FabricItemSettings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(PleasantLife.MOD_ID, name), item);
@@ -40,10 +51,10 @@ public class ModItems {
 
     public static void addItemsToItemGroup() {
         addToItemGroup(ModItemGroup.PLEASANTLIFE, ORANGE);
-        addToItemGroup(ItemGroups.INGREDIENTS, ORANGE);
+        addToItemGroup(ItemGroups.FOOD_AND_DRINK, ORANGE);
 
         addToItemGroup(ModItemGroup.PLEASANTLIFE, ORANGE_SLICE);
-        addToItemGroup(ItemGroups.INGREDIENTS, ORANGE_SLICE);
+        addToItemGroup(ItemGroups.FOOD_AND_DRINK, ORANGE_SLICE);
 
         addToItemGroup(ModItemGroup.PLEASANTLIFE, WOODEN_KNIFE);
         addToItemGroup(ItemGroups.TOOLS, WOODEN_KNIFE);
@@ -62,6 +73,12 @@ public class ModItems {
 
         addToItemGroup(ModItemGroup.PLEASANTLIFE, NETHERITE_KNIFE);
         addToItemGroup(ItemGroups.TOOLS, NETHERITE_KNIFE);
+
+        addToItemGroup(ModItemGroup.PLEASANTLIFE, STRAWBERRY);
+        addToItemGroup(ItemGroups.FOOD_AND_DRINK, STRAWBERRY);
+
+        addToItemGroup(ModItemGroup.PLEASANTLIFE, STRAWBERRY_SEEDS);
+        addToItemGroup(ItemGroups.NATURAL, STRAWBERRY_SEEDS);
     }
 
     public static void addToItemGroup(ItemGroup group, Item item) {

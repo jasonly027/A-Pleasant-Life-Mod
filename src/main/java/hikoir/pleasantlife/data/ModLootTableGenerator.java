@@ -1,5 +1,7 @@
 package hikoir.pleasantlife.data;
 
+import hikoir.pleasantlife.block.ModBlocks;
+import hikoir.pleasantlife.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 
