@@ -16,7 +16,22 @@ public class ModItems {
             new Item(new FabricItemSettings().food(ModFoodComponents.ORANGE_SLICE)));
 
     public static final Item WOODEN_KNIFE = registerItem("wooden_knife",
-            new SwordItem(ToolMaterials.WOOD, 1, -2.2f, new Item.Settings()));
+            new KnifeItem(ToolMaterials.WOOD, 1, -2.2f, new Item.Settings()));
+
+    public static final Item STONE_KNIFE = registerItem("stone_knife",
+            new KnifeItem(ToolMaterials.STONE, 1, -2.2f, new Item.Settings()));
+
+    public static final Item IRON_KNIFE = registerItem("iron_knife",
+            new KnifeItem(ToolMaterials.IRON, 1, -2.2f, new Item.Settings()));
+
+    public static final Item GOLDEN_KNIFE = registerItem("golden_knife",
+            new KnifeItem(ToolMaterials.GOLD, 1, -2.2f, new Item.Settings()));
+
+    public static final Item DIAMOND_KNIFE = registerItem("diamond_knife",
+            new KnifeItem(ToolMaterials.DIAMOND, 1, -2.2f, new Item.Settings()));
+
+    public static final Item NETHERITE_KNIFE = registerItem("netherite_knife",
+            new KnifeItem(ToolMaterials.NETHERITE, 1, -2.2f, new Item.Settings()));
 
 
     private static Item registerItem(String name, Item item) {
@@ -32,6 +47,21 @@ public class ModItems {
 
         addToItemGroup(ModItemGroup.PLEASANTLIFE, WOODEN_KNIFE);
         addToItemGroup(ItemGroups.TOOLS, WOODEN_KNIFE);
+
+        addToItemGroup(ModItemGroup.PLEASANTLIFE, STONE_KNIFE);
+        addToItemGroup(ItemGroups.TOOLS, STONE_KNIFE);
+
+        addToItemGroup(ModItemGroup.PLEASANTLIFE, IRON_KNIFE);
+        addToItemGroup(ItemGroups.TOOLS, IRON_KNIFE);
+
+        addToItemGroup(ModItemGroup.PLEASANTLIFE, GOLDEN_KNIFE);
+        addToItemGroup(ItemGroups.TOOLS, GOLDEN_KNIFE);
+
+        addToItemGroup(ModItemGroup.PLEASANTLIFE, DIAMOND_KNIFE);
+        addToItemGroup(ItemGroups.TOOLS, DIAMOND_KNIFE);
+
+        addToItemGroup(ModItemGroup.PLEASANTLIFE, NETHERITE_KNIFE);
+        addToItemGroup(ItemGroups.TOOLS, NETHERITE_KNIFE);
     }
 
     public static void addToItemGroup(ItemGroup group, Item item) {

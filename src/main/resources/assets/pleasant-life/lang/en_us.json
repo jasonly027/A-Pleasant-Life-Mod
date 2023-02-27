@@ -1,5 +1,10 @@
 {
   "item.pleasant-life.orange": "Orange",
   "item.pleasant-life.orange_slice": "Orange Slice",
-  "item.pleasant-life.wooden_knife": "Wooden Knife"
+  "item.pleasant-life.wooden_knife": "Wooden Knife",
+  "item.pleasant-life.stone_knife": "Stone Knife",
+  "item.pleasant-life.iron_knife": "Iron Knife",
+  "item.pleasant-life.golden_knife": "Golden Knife",
+  "item.pleasant-life.diamond_knife": "Diamond Knife",
+  "item.pleasant-life.netherite_knife": "Netherite Knife"
 }
