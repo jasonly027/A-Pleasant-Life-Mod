@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "pleasant-life:slice_of_bread"
+    },
+    "K": {
+      "item": "pleasant-life:kiwi_slice"
+    },
+    "O": {
+      "item": "pleasant-life:orange_slice"
+    },
+    "S": {
+      "item": "pleasant-life:strawberry"
+    }
+  },
+  "pattern": [
+    " B ",
+    "SOK",
+    " B "
+  ],
+  "result": {
+    "item": "pleasant-life:fruit_sandwich"
+  }
+}

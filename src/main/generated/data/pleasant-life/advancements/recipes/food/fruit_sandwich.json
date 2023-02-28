@@ -1,0 +1,73 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_kiwi_slice": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "pleasant-life:kiwi_slice"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_orange_slice": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "pleasant-life:orange_slice"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_slice_of_bread": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "pleasant-life:slice_of_bread"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_strawberry": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "pleasant-life:strawberry"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:fruit_sandwich"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_strawberry",
+      "has_slice_of_bread",
+      "has_orange_slice",
+      "has_kiwi_slice",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:fruit_sandwich"
+    ]
+  }
+}

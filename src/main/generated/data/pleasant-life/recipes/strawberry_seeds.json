@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "pleasant-life:strawberry"
+    }
+  ],
+  "result": {
+    "item": "pleasant-life:strawberry_seeds"
+  }
+}
