@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "pleasant-life:block/strawberry_bush_largest"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "pleasant-life:block/strawberry_bush_smallest"
+    },
+    "age=1": {
+      "model": "pleasant-life:block/strawberry_bush_small"
+    },
+    "age=2": {
+      "model": "pleasant-life:block/strawberry_bush_small"
+    },
+    "age=3": {
+      "model": "pleasant-life:block/strawberry_bush_medium"
+    },
+    "age=4": {
+      "model": "pleasant-life:block/strawberry_bush_large"
+    },
+    "age=5": {
+      "model": "pleasant-life:block/strawberry_bush_large"
+    },
+    "age=6": {
+      "model": "pleasant-life:block/strawberry_bush_largest"
+    }
+  }
+}
