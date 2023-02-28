@@ -29,5 +29,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.NETHERITE_KNIFE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.STRAWBERRY, Models.GENERATED);
         itemModelGenerator.register(ModItems.STRAWBERRY_SEEDS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.KIWI, Models.GENERATED);
+        itemModelGenerator.register(ModItems.KIWI_SLICE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.STRAWBERRY_SANDWICH, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SLICE_OF_BREAD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FRUIT_SANDWICH, Models.GENERATED);
+
+
     }
 }

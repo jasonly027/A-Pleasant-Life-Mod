@@ -15,35 +15,23 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-    public static final Item ORANGE = registerItem("orange",
-            new Item(new FabricItemSettings().food(ModFoodComponents.ORANGE)));
+    public static final Item ORANGE = registerItem("orange", new Item(new FabricItemSettings().food(ModFoodComponents.ORANGE)));
+    public static final Item ORANGE_SLICE = registerItem("orange_slice", new Item(new FabricItemSettings().food(ModFoodComponents.ORANGE_SLICE)));
+    public static final Item WOODEN_KNIFE = registerItem("wooden_knife", new KnifeItem(ToolMaterials.WOOD, 1, -2.2f, new Item.Settings()));
+    public static final Item STONE_KNIFE = registerItem("stone_knife", new KnifeItem(ToolMaterials.STONE, 1, -2.2f, new Item.Settings()));
+    public static final Item IRON_KNIFE = registerItem("iron_knife", new KnifeItem(ToolMaterials.IRON, 1, -2.2f, new Item.Settings()));
+    public static final Item GOLDEN_KNIFE = registerItem("golden_knife", new KnifeItem(ToolMaterials.GOLD, 1, -2.2f, new Item.Settings()));
+    public static final Item DIAMOND_KNIFE = registerItem("diamond_knife", new KnifeItem(ToolMaterials.DIAMOND, 1, -2.2f, new Item.Settings()));
+    public static final Item NETHERITE_KNIFE = registerItem("netherite_knife", new KnifeItem(ToolMaterials.NETHERITE, 1, -2.2f, new Item.Settings()));
+    public static final Item STRAWBERRY = registerItem("strawberry", new Item(new FabricItemSettings().food(ModFoodComponents.STRAWBERRY)));
+    public static final Item STRAWBERRY_SEEDS = registerItem("strawberry_seeds", new AliasedBlockItem(ModBlocks.STRAWBERRY_BUSH, new FabricItemSettings()));
+    public static final Item KIWI = registerItem("kiwi", new Item(new FabricItemSettings().food(ModFoodComponents.KIWI)));
+    public static final Item KIWI_SLICE = registerItem("kiwi_slice", new Item(new FabricItemSettings().food(ModFoodComponents.KIWI_SLICE)));
+    public static final Item STRAWBERRY_SANDWICH = registerItem("strawberry_sandwich", new Item(new FabricItemSettings().food(ModFoodComponents.STRAWBERRY_SANDWICH)));
+    public static final Item SLICE_OF_BREAD = registerItem("slice_of_bread", new Item(new FabricItemSettings().food(ModFoodComponents.SLICE_OF_BREAD)));
+    public static final Item FRUIT_SANDWICH = registerItem("fruit_sandwich", new Item(new FabricItemSettings().food(ModFoodComponents.FRUIT_SANDWICH)));
 
-    public static final Item ORANGE_SLICE = registerItem("orange_slice",
-            new Item(new FabricItemSettings().food(ModFoodComponents.ORANGE_SLICE)));
 
-    public static final Item WOODEN_KNIFE = registerItem("wooden_knife",
-            new KnifeItem(ToolMaterials.WOOD, 1, -2.2f, new Item.Settings()));
-
-    public static final Item STONE_KNIFE = registerItem("stone_knife",
-            new KnifeItem(ToolMaterials.STONE, 1, -2.2f, new Item.Settings()));
-
-    public static final Item IRON_KNIFE = registerItem("iron_knife",
-            new KnifeItem(ToolMaterials.IRON, 1, -2.2f, new Item.Settings()));
-
-    public static final Item GOLDEN_KNIFE = registerItem("golden_knife",
-            new KnifeItem(ToolMaterials.GOLD, 1, -2.2f, new Item.Settings()));
-
-    public static final Item DIAMOND_KNIFE = registerItem("diamond_knife",
-            new KnifeItem(ToolMaterials.DIAMOND, 1, -2.2f, new Item.Settings()));
-
-    public static final Item NETHERITE_KNIFE = registerItem("netherite_knife",
-            new KnifeItem(ToolMaterials.NETHERITE, 1, -2.2f, new Item.Settings()));
-
-    public static final Item STRAWBERRY = registerItem("strawberry",
-            new Item(new FabricItemSettings().food(ModFoodComponents.STRAWBERRY)));
-
-    public static final Item STRAWBERRY_SEEDS = registerItem("strawberry_seeds",
-            new AliasedBlockItem(ModBlocks.STRAWBERRY_BUSH, new FabricItemSettings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(PleasantLife.MOD_ID, name), item);
@@ -79,6 +67,21 @@ public class ModItems {
 
         addToItemGroup(ModItemGroup.PLEASANTLIFE, STRAWBERRY_SEEDS);
         addToItemGroup(ItemGroups.NATURAL, STRAWBERRY_SEEDS);
+
+        addToItemGroup(ModItemGroup.PLEASANTLIFE, KIWI);
+        addToItemGroup(ItemGroups.FOOD_AND_DRINK, KIWI);
+
+        addToItemGroup(ModItemGroup.PLEASANTLIFE, KIWI_SLICE);
+        addToItemGroup(ItemGroups.FOOD_AND_DRINK, KIWI_SLICE);
+
+        addToItemGroup(ModItemGroup.PLEASANTLIFE, STRAWBERRY_SANDWICH);
+        addToItemGroup(ItemGroups.FOOD_AND_DRINK, STRAWBERRY_SANDWICH);
+
+        addToItemGroup(ModItemGroup.PLEASANTLIFE, SLICE_OF_BREAD);
+        addToItemGroup(ItemGroups.FOOD_AND_DRINK, SLICE_OF_BREAD);
+
+        addToItemGroup(ModItemGroup.PLEASANTLIFE, FRUIT_SANDWICH);
+        addToItemGroup(ItemGroups.FOOD_AND_DRINK, FRUIT_SANDWICH);
     }
 
     public static void addToItemGroup(ItemGroup group, Item item) {
