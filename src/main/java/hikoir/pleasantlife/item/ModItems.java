@@ -30,11 +30,22 @@ public class ModItems {
     public static final Item STRAWBERRY_SANDWICH = registerItem("strawberry_sandwich", new Item(new FabricItemSettings().food(ModFoodComponents.STRAWBERRY_SANDWICH)));
     public static final Item SLICE_OF_BREAD = registerItem("slice_of_bread", new Item(new FabricItemSettings().food(ModFoodComponents.SLICE_OF_BREAD)));
     public static final Item FRUIT_SANDWICH = registerItem("fruit_sandwich", new Item(new FabricItemSettings().food(ModFoodComponents.FRUIT_SANDWICH)));
+    public static final Item ORANGE_TREE_SAPLING = registerBlockItem(ModBlocks.ORANGE_TREE_SAPLING);
 
 
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(PleasantLife.MOD_ID, name), item);
+    }
+
+//    TODO: FIX
+    private static Item registerBlockItem(Block block) {
+        BlockItem blockItem = new BlockItem(block, new FabricItemSettings());
+        Block splitBlock = blockItem.getBlock();
+        Identifier blockID = Registries.BLOCK.getId(splitBlock);
+        Item splitItem = (Item)blockItem;
+
+        return Registry.register(Registries.ITEM, blockID, splitItem);
     }
 
     public static void addItemsToItemGroup() {
@@ -82,6 +93,9 @@ public class ModItems {
 
         addToItemGroup(ModItemGroup.PLEASANTLIFE, FRUIT_SANDWICH);
         addToItemGroup(ItemGroups.FOOD_AND_DRINK, FRUIT_SANDWICH);
+
+        addToItemGroup(ModItemGroup.PLEASANTLIFE, ORANGE_TREE_SAPLING);
+        addToItemGroup(ItemGroups.NATURAL, ORANGE_TREE_SAPLING);
     }
 
     public static void addToItemGroup(ItemGroup group, Item item) {
