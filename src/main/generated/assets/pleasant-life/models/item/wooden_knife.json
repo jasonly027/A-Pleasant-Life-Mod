@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "pleasant-life:item/wooden_knife"
+  }
+}

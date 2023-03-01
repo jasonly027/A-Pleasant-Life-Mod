@@ -41,7 +41,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.STRAWBERRY_SANDWICH, Models.GENERATED);
         itemModelGenerator.register(ModItems.SLICE_OF_BREAD, Models.GENERATED);
         itemModelGenerator.register(ModItems.FRUIT_SANDWICH, Models.GENERATED);
-        itemModelGenerator.register(ModItems.ORANGE_TREE_SAPLING, Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.ORANGE_TREE_SAPLING.asItem(), Models.GENERATED);
 
     }
 }
