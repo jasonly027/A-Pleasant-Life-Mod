@@ -1,1 +1,8 @@
-// 1.19.3	2023-03-01T01:41:27.8395205	A Pleasant Life/Block Loot Tables
+// 1.19.3	2023-03-08T01:15:27.3055296	A Pleasant Life/Block Loot Tables
+77795607cbb8b0466386be111ad7decb2a5d1061 data\pleasant-life\loot_tables\blocks\orange_tree_leaves.json
+5a93c4ae20beeaf7c1e7bb19f29b5364513c783a data\pleasant-life\loot_tables\blocks\orange_tree_wood.json
+abc70a5f7d48a1ca96f22c968c47fd1bfad87c5e data\pleasant-life\loot_tables\blocks\orange_tree_sapling.json
+e62b6d45e5e925fb91091351a90a38af7c5a8082 data\pleasant-life\loot_tables\blocks\orange_tree_planks.json
+8234b0126b73fe109c06a57b987fa371f667e887 data\pleasant-life\loot_tables\blocks\stripped_orange_tree_wood.json
+6f835320d02ea32a1205460dffae9045e9f0b47b data\pleasant-life\loot_tables\blocks\stripped_orange_tree_log.json
+f08850ecf7e7258ec9ad63364665f68fe677ba3d data\pleasant-life\loot_tables\blocks\orange_tree_log.json

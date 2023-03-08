@@ -21,19 +21,19 @@ public class ModBlocks {
     public static final Block STRAWBERRY_BUSH = registerBlockWithoutItem("strawberry_bush",
             new StrawberryBushBlock(AbstractBlock.Settings.of(Material.PLANT).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH)));
     public static final Block ORANGE_TREE_LOG = registerBlock("orange_tree_log",
-            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(4.0f).requiresTool()), ModItemGroup.PLEASANTLIFE);
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)), ModItemGroup.PLEASANTLIFE);
     public static final Block ORANGE_TREE_WOOD = registerBlock("orange_tree_wood",
-            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).strength(4.0f).requiresTool()), ModItemGroup.PLEASANTLIFE);
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD)), ModItemGroup.PLEASANTLIFE);
     public static final Block STRIPPED_ORANGE_TREE_LOG = registerBlock("stripped_orange_tree_log",
-            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG).strength(4.0f).requiresTool()), ModItemGroup.PLEASANTLIFE);
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG)), ModItemGroup.PLEASANTLIFE);
     public static final Block STRIPPED_ORANGE_TREE_WOOD = registerBlock("stripped_orange_tree_wood",
-            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD).strength(4.0f).requiresTool()), ModItemGroup.PLEASANTLIFE);
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD)), ModItemGroup.PLEASANTLIFE);
     public static final Block ORANGE_TREE_PLANKS = registerBlock("orange_tree_planks",
-            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).strength(4.0f).requiresTool()), ModItemGroup.PLEASANTLIFE);
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)), ModItemGroup.PLEASANTLIFE);
     public static final Block ORANGE_TREE_LEAVES = registerBlock("orange_tree_leaves",
-            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).strength(4.0f).requiresTool()), ModItemGroup.PLEASANTLIFE);
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)), ModItemGroup.PLEASANTLIFE);
     public static final Block ORANGE_TREE_SAPLING = registerBlock("orange_tree_sapling",
-            new SaplingBlock(new OrangeTreeSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).strength(4.0f).requiresTool()), ModItemGroup.PLEASANTLIFE);
+            new SaplingBlock(new OrangeTreeSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), ModItemGroup.PLEASANTLIFE);
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);

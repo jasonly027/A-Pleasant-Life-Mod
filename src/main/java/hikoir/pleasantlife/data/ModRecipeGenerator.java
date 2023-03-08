@@ -1,5 +1,7 @@
 package hikoir.pleasantlife.data;
 
+import hikoir.pleasantlife.block.ModBlocks;
+import hikoir.pleasantlife.item.ModItemTags;
 import hikoir.pleasantlife.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
@@ -7,7 +9,6 @@ import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.recipe.book.RecipeCategory;
-import net.minecraft.util.Identifier;
 
 import java.util.function.Consumer;
 
@@ -53,5 +54,11 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModItems.KIWI_SLICE),
                         FabricRecipeProvider.conditionsFromItem(ModItems.KIWI_SLICE))
                 .offerTo(exporter, FabricRecipeProvider.getRecipeName(ModItems.FRUIT_SANDWICH));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_TREE_PLANKS, 4)
+                .input(ModItemTags.ORANGE_TREE_LOGS)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ORANGE_TREE_LOG),
+                        FabricRecipeProvider.conditionsFromTag(ModItemTags.ORANGE_TREE_LOGS))
+                .offerTo(exporter, FabricRecipeProvider.getRecipeName(ModBlocks.ORANGE_TREE_PLANKS));
     }
 }
