@@ -3,6 +3,7 @@ package hikoir.pleasantlife.block;
 import hikoir.pleasantlife.PleasantLife;
 import hikoir.pleasantlife.block.custom.StrawberryBushBlock;
 import hikoir.pleasantlife.item.ModItemGroup;
+import hikoir.pleasantlife.world.tree.KiwiSaplingGenerator;
 import hikoir.pleasantlife.world.tree.OrangeSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -62,7 +63,7 @@ public class ModBlocks {
     public static final Block KIWI_LEAVES = registerBlock("kiwi_leaves",
             new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)), ModItemGroup.PLEASANTLIFE);
     public static final Block KIWI_SAPLING = registerBlock("kiwi_sapling",
-            new SaplingBlock(new OrangeSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), ModItemGroup.PLEASANTLIFE);
+            new SaplingBlock(new KiwiSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), ModItemGroup.PLEASANTLIFE);
     public static final Block KIWI_BUTTON = registerBlock("kiwi_button",
             new ButtonBlock(FabricBlockSettings.copyOf(Blocks.OAK_BUTTON), 30, true, SoundEvents.BLOCK_WOODEN_BUTTON_CLICK_OFF, SoundEvents.BLOCK_WOODEN_BUTTON_CLICK_ON), ModItemGroup.PLEASANTLIFE);
     public static final Block KIWI_PRESSURE_PLATE = registerBlock("kiwi_pressure_plate",
