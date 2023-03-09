@@ -1,6 +1,5 @@
 package hikoir.pleasantlife.world;
 
-import com.mojang.datafixers.kinds.Const;
 import hikoir.pleasantlife.PleasantLife;
 import hikoir.pleasantlife.block.ModBlocks;
 import net.minecraft.registry.Registerable;
@@ -18,13 +17,13 @@ import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
 public class ModConfiguredFeatures {
-    public static final RegistryKey<ConfiguredFeature<?, ?>> ORANGE_TREE_KEY = registerKey("orange_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ORANGE_KEY = registerKey("orange");
 
     public static void bootstrap(Registerable<ConfiguredFeature< ?, ?>> context) {
-        register(context, ORANGE_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
-                BlockStateProvider.of(ModBlocks.ORANGE_TREE_LOG),
+        register(context, ORANGE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(ModBlocks.ORANGE_LOG),
                 new StraightTrunkPlacer(5,1,0),
-                BlockStateProvider.of(ModBlocks.ORANGE_TREE_LEAVES),
+                BlockStateProvider.of(ModBlocks.ORANGE_LEAVES),
                 new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)).build());
     }

@@ -12,8 +12,6 @@ public class ModLangGenerator extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(TranslationBuilder translationBuilder) {
-        translationBuilder.add(ModItems.ORANGE, "Orange");
-        translationBuilder.add(ModItems.ORANGE_SLICE, "Orange Slice");
         translationBuilder.add(ModItems.WOODEN_KNIFE, "Wooden Knife");
         translationBuilder.add(ModItems.STONE_KNIFE, "Stone Knife");
         translationBuilder.add(ModItems.IRON_KNIFE, "Iron Knife");
@@ -28,12 +26,21 @@ public class ModLangGenerator extends FabricLanguageProvider {
         translationBuilder.add(ModItems.SLICE_OF_BREAD, "Slice of Bread");
         translationBuilder.add(ModItems.FRUIT_SANDWICH, "Fruit Sandwich");
 
-        translationBuilder.add(ModBlocks.ORANGE_TREE_LOG, "Orange Tree Log");
-        translationBuilder.add(ModBlocks.ORANGE_TREE_WOOD, "Orange Tree Wood");
-        translationBuilder.add(ModBlocks.STRIPPED_ORANGE_TREE_LOG, "Stripped Orange Tree Log");
-        translationBuilder.add(ModBlocks.STRIPPED_ORANGE_TREE_WOOD, "Stripped Orange Tree Wood");
-        translationBuilder.add(ModBlocks.ORANGE_TREE_PLANKS, "Orange Tree Planks");
-        translationBuilder.add(ModBlocks.ORANGE_TREE_LEAVES, "Orange Tree Leaves");
-        translationBuilder.add(ModBlocks.ORANGE_TREE_SAPLING, "Orange Tree Sapling");
+        translationBuilder.add(ModItems.ORANGE, "Orange");
+        translationBuilder.add(ModItems.ORANGE_SLICE, "Orange Slice");
+        translationBuilder.add(ModBlocks.ORANGE_LOG, "Orange Log");
+        translationBuilder.add(ModBlocks.ORANGE_WOOD, "Orange Wood");
+        translationBuilder.add(ModBlocks.STRIPPED_ORANGE_LOG, "Stripped Orange Log");
+        translationBuilder.add(ModBlocks.STRIPPED_ORANGE_WOOD, "Stripped Orange Wood");
+        translationBuilder.add(ModBlocks.ORANGE_PLANKS, "Orange Planks");
+        translationBuilder.add(ModBlocks.ORANGE_LEAVES, "Orange Leaves");
+        translationBuilder.add(ModBlocks.ORANGE_SAPLING, "Orange Sapling");
+        translationBuilder.add(ModBlocks.ORANGE_BUTTON, "Orange Button");
+        translationBuilder.add(ModBlocks.ORANGE_PRESSURE_PLATE, "Orange Pressure Plate");
+        translationBuilder.add(ModBlocks.ORANGE_FENCE, "Orange Fence");
+        translationBuilder.add(ModBlocks.ORANGE_FENCE_GATE, "Orange Fence Gate");
+        translationBuilder.add(ModBlocks.ORANGE_SLAB, "Orange Slab");
+        translationBuilder.add(ModBlocks.ORANGE_STAIRS, "Orange Stairs");
+
     }
 }

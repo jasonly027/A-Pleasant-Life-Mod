@@ -5,9 +5,11 @@ import hikoir.pleasantlife.item.ModItemTags;
 import hikoir.pleasantlife.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 
 import java.util.function.Consumer;
@@ -55,10 +57,73 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(ModItems.KIWI_SLICE))
                 .offerTo(exporter, FabricRecipeProvider.getRecipeName(ModItems.FRUIT_SANDWICH));
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_TREE_PLANKS, 4)
-                .input(ModItemTags.ORANGE_TREE_LOGS)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ORANGE_TREE_LOG),
-                        FabricRecipeProvider.conditionsFromTag(ModItemTags.ORANGE_TREE_LOGS))
-                .offerTo(exporter, FabricRecipeProvider.getRecipeName(ModBlocks.ORANGE_TREE_PLANKS));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_PLANKS, 4)
+                .input(ModItemTags.ORANGE_LOGS)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ORANGE_LOG),
+                        FabricRecipeProvider.conditionsFromTag(ModItemTags.ORANGE_LOGS))
+                .offerTo(exporter, FabricRecipeProvider.getRecipeName(ModBlocks.ORANGE_PLANKS));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_WOOD, 3)
+                .pattern("LL")
+                .pattern("LL")
+                .input('L', ModBlocks.ORANGE_LOG)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ORANGE_LOG),
+                        FabricRecipeProvider.conditionsFromItem(ModBlocks.ORANGE_LOG))
+                .offerTo(exporter, FabricRecipeProvider.getRecipeName(ModBlocks.ORANGE_WOOD));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STRIPPED_ORANGE_WOOD, 3)
+                .pattern("LL")
+                .pattern("LL")
+                .input('L', ModBlocks.STRIPPED_ORANGE_LOG)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.STRIPPED_ORANGE_LOG),
+                        FabricRecipeProvider.conditionsFromItem(ModBlocks.STRIPPED_ORANGE_LOG))
+                .offerTo(exporter, FabricRecipeProvider.getRecipeName(ModBlocks.STRIPPED_ORANGE_WOOD));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_BUTTON, 1)
+                .input(ModBlocks.ORANGE_PLANKS)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ORANGE_PLANKS),
+                        FabricRecipeProvider.conditionsFromItem(ModBlocks.ORANGE_PLANKS))
+                .offerTo(exporter, FabricRecipeProvider.getRecipeName(ModBlocks.ORANGE_BUTTON));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_PRESSURE_PLATE, 1)
+                .pattern("PP")
+                .input('P', ModBlocks.ORANGE_PLANKS)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ORANGE_PLANKS),
+                        FabricRecipeProvider.conditionsFromItem(ModBlocks.ORANGE_PLANKS))
+                .offerTo(exporter, FabricRecipeProvider.getRecipeName(ModBlocks.ORANGE_PRESSURE_PLATE));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_FENCE, 3)
+                .pattern("PSP")
+                .pattern("PSP")
+                .input('P', ModBlocks.ORANGE_PLANKS)
+                .input('S', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ORANGE_PLANKS),
+                        FabricRecipeProvider.conditionsFromItem(ModBlocks.ORANGE_PLANKS))
+                .offerTo(exporter, FabricRecipeProvider.getRecipeName(ModBlocks.ORANGE_FENCE));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_FENCE_GATE, 1)
+                .pattern("SPS")
+                .pattern("SPS")
+                .input('P', ModBlocks.ORANGE_PLANKS)
+                .input('S', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ORANGE_PLANKS),
+                        FabricRecipeProvider.conditionsFromItem(ModBlocks.ORANGE_PLANKS))
+                .offerTo(exporter, FabricRecipeProvider.getRecipeName(ModBlocks.ORANGE_FENCE_GATE));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_SLAB, 6)
+                .pattern("PPP")
+                .input('P', ModBlocks.ORANGE_PLANKS)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ORANGE_PLANKS),
+                        FabricRecipeProvider.conditionsFromItem(ModBlocks.ORANGE_PLANKS))
+                .offerTo(exporter, FabricRecipeProvider.getRecipeName(ModBlocks.ORANGE_SLAB));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_STAIRS, 4)
+                .pattern("P  ")
+                .pattern("PP ")
+                .pattern("PPP")
+                .input('P', ModBlocks.ORANGE_PLANKS)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.ORANGE_PLANKS),
+                        FabricRecipeProvider.conditionsFromItem(ModBlocks.ORANGE_PLANKS))
+                .offerTo(exporter, FabricRecipeProvider.getRecipeName(ModBlocks.ORANGE_STAIRS));
     }
 }

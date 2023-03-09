@@ -8,12 +8,16 @@ public class ModFlammableBlockRegistry {
 
         registry.add(ModBlocks.STRAWBERRY_BUSH, 60, 100);
 
-        registry.add(ModBlocks.ORANGE_TREE_LOG, 5, 20);
-        registry.add(ModBlocks.ORANGE_TREE_WOOD, 5, 20);
-        registry.add(ModBlocks.STRIPPED_ORANGE_TREE_LOG, 5, 20);
-        registry.add(ModBlocks.STRIPPED_ORANGE_TREE_WOOD, 5, 20);
+        registry.add(ModBlocks.ORANGE_LOG, 5, 20);
+        registry.add(ModBlocks.ORANGE_WOOD, 5, 20);
+        registry.add(ModBlocks.STRIPPED_ORANGE_LOG, 5, 20);
+        registry.add(ModBlocks.STRIPPED_ORANGE_WOOD, 5, 20);
+        registry.add(ModBlocks.ORANGE_PLANKS, 5, 20);
+        registry.add(ModBlocks.ORANGE_LEAVES, 30, 60);
+        registry.add(ModBlocks.ORANGE_FENCE, 5, 20);
+        registry.add(ModBlocks.ORANGE_FENCE_GATE, 5, 20);
+        registry.add(ModBlocks.ORANGE_SLAB, 5, 20);
+        registry.add(ModBlocks.ORANGE_STAIRS, 5, 20);
 
-        registry.add(ModBlocks.ORANGE_TREE_LEAVES, 30, 60);
-        registry.add(ModBlocks.ORANGE_TREE_PLANKS, 5, 20);
     }
 }

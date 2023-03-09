@@ -1,8 +1,14 @@
-// 1.19.3	2023-03-08T01:15:27.3055296	A Pleasant Life/Block Loot Tables
-77795607cbb8b0466386be111ad7decb2a5d1061 data\pleasant-life\loot_tables\blocks\orange_tree_leaves.json
-5a93c4ae20beeaf7c1e7bb19f29b5364513c783a data\pleasant-life\loot_tables\blocks\orange_tree_wood.json
-abc70a5f7d48a1ca96f22c968c47fd1bfad87c5e data\pleasant-life\loot_tables\blocks\orange_tree_sapling.json
-e62b6d45e5e925fb91091351a90a38af7c5a8082 data\pleasant-life\loot_tables\blocks\orange_tree_planks.json
-8234b0126b73fe109c06a57b987fa371f667e887 data\pleasant-life\loot_tables\blocks\stripped_orange_tree_wood.json
-6f835320d02ea32a1205460dffae9045e9f0b47b data\pleasant-life\loot_tables\blocks\stripped_orange_tree_log.json
-f08850ecf7e7258ec9ad63364665f68fe677ba3d data\pleasant-life\loot_tables\blocks\orange_tree_log.json
+// 1.19.3	2023-03-09T00:28:46.8733057	A Pleasant Life/Block Loot Tables
+c20210718f6af948fe2970720b4551e320728669 data\pleasant-life\loot_tables\blocks\orange_fence_gate.json
+c86762d02800981348d6efc9feb796d1d2d3230f data\pleasant-life\loot_tables\blocks\orange_log.json
+3baca147a9f2abfda31912b0a3846fce51ef1036 data\pleasant-life\loot_tables\blocks\orange_wood.json
+935536dddd357330c336d1c04ea1786b82218575 data\pleasant-life\loot_tables\blocks\orange_sapling.json
+d023747939a198fe2ee9be360b72f130b71dfee3 data\pleasant-life\loot_tables\blocks\orange_stairs.json
+fa6fa1cf9a7b023d8195682d6de907af524346b3 data\pleasant-life\loot_tables\blocks\stripped_orange_log.json
+aeb6bf60949efdf60a0142323202221ef50410dd data\pleasant-life\loot_tables\blocks\stripped_orange_wood.json
+fb517b65c2ea6441ca6a96bde3e42ad4320e7945 data\pleasant-life\loot_tables\blocks\orange_pressure_plate.json
+a92c3ea5b3bc4e461709696c909c4260f35ef215 data\pleasant-life\loot_tables\blocks\orange_slab.json
+4deae205f3c7e6acc69cf4443a268b2dd552d0b3 data\pleasant-life\loot_tables\blocks\orange_button.json
+cbc20a753870c31061054f5df4b3e7f850853988 data\pleasant-life\loot_tables\blocks\orange_fence.json
+7a1d7d2fdb81cf4e74bbf7c86f57b218f4819294 data\pleasant-life\loot_tables\blocks\orange_planks.json
+4af99ebaf6c3c2dc966af1201db7340bfc982cab data\pleasant-life\loot_tables\blocks\orange_leaves.json

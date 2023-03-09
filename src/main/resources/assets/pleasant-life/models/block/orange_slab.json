@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "pleasant-life:block/orange_planks",
+    "top": "pleasant-life:block/orange_planks",
+    "side": "pleasant-life:block/orange_planks"
+  }
+}

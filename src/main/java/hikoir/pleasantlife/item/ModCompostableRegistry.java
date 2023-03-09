@@ -14,7 +14,7 @@ public class ModCompostableRegistry {
         registry.add(ModItems.STRAWBERRY_SEEDS, 0.3f);
         registry.add(ModItems.KIWI, 0.65f);
         registry.add(ModItems.KIWI_SLICE, 0.5f);
-        registry.add(ModBlocks.ORANGE_TREE_SAPLING.asItem(), 0.3f);
+        registry.add(ModBlocks.ORANGE_SAPLING.asItem(), 0.3f);
         registry.add(ModItems.FRUIT_SANDWICH, 0.85f);
         registry.add(ModItems.STRAWBERRY_SANDWICH, 0.85f);
         registry.add(ModItems.SLICE_OF_BREAD, 0.65f);

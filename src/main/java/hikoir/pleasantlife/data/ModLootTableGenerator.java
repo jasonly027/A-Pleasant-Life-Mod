@@ -28,13 +28,19 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        addDrop(ModBlocks.ORANGE_TREE_LOG);
-        addDrop(ModBlocks.ORANGE_TREE_WOOD);
-        addDrop(ModBlocks.STRIPPED_ORANGE_TREE_LOG);
-        addDrop(ModBlocks.STRIPPED_ORANGE_TREE_WOOD);
-        addDrop(ModBlocks.ORANGE_TREE_PLANKS);
-        addDrop(ModBlocks.ORANGE_TREE_SAPLING);
-        addDrop(ModBlocks.ORANGE_TREE_LEAVES, fruitLeavesDrops(ModBlocks.ORANGE_TREE_LEAVES, ModBlocks.ORANGE_TREE_SAPLING, ModItems.ORANGE, SAPLING_DROP_CHANCE));
+        addDrop(ModBlocks.ORANGE_LOG);
+        addDrop(ModBlocks.ORANGE_WOOD);
+        addDrop(ModBlocks.STRIPPED_ORANGE_LOG);
+        addDrop(ModBlocks.STRIPPED_ORANGE_WOOD);
+        addDrop(ModBlocks.ORANGE_PLANKS);
+        addDrop(ModBlocks.ORANGE_SAPLING);
+        addDrop(ModBlocks.ORANGE_LEAVES, fruitLeavesDrops(ModBlocks.ORANGE_LEAVES, ModBlocks.ORANGE_SAPLING, ModItems.ORANGE, SAPLING_DROP_CHANCE));
+        addDrop(ModBlocks.ORANGE_BUTTON);
+        addDrop(ModBlocks.ORANGE_PRESSURE_PLATE);
+        addDrop(ModBlocks.ORANGE_FENCE);
+        addDrop(ModBlocks.ORANGE_FENCE_GATE);
+        addDrop(ModBlocks.ORANGE_SLAB);
+        addDrop(ModBlocks.ORANGE_STAIRS);
     }
 
     private static final LootCondition.Builder WITH_SILK_TOUCH = MatchToolLootCondition.builder(ItemPredicate.Builder.create().enchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, NumberRange.IntRange.atLeast(1))));

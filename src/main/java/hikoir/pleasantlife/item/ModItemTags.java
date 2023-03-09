@@ -7,5 +7,5 @@ import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
 public class ModItemTags {
-    public static final TagKey<Item> ORANGE_TREE_LOGS = TagKey.of(RegistryKeys.ITEM, new Identifier(PleasantLife.MOD_ID, "orange_tree_logs"));
+    public static final TagKey<Item> ORANGE_LOGS = TagKey.of(RegistryKeys.ITEM, new Identifier(PleasantLife.MOD_ID, "orange_logs"));
 }

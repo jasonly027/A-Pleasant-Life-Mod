@@ -1,5 +1,5 @@
 {
-  "feature": "pleasant-life:orange_tree",
+  "feature": "pleasant-life:orange",
   "placement": [
     {
       "type": "minecraft:count",
@@ -36,7 +36,7 @@
       "predicate": {
         "type": "minecraft:would_survive",
         "state": {
-          "Name": "pleasant-life:orange_tree_sapling",
+          "Name": "pleasant-life:orange_sapling",
           "Properties": {
             "stage": "0"
           }

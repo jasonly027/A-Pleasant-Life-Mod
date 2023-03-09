@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "": [
+
+      {
+        "model": "pleasant-life:block/orange_leaves0",
+        "weight": 10
+      },
+      {
+        "model": "pleasant-life:block/orange_leaves1",
+        "weight": 6
+      },
+      {
+        "model": "pleasant-life:block/orange_leaves2",
+        "weight": 4
+      }
+    ]
+  }
+}

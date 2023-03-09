@@ -15,13 +15,11 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        blockStateModelGenerator.registerLog(ModBlocks.ORANGE_TREE_LOG).log(ModBlocks.ORANGE_TREE_LOG).wood(ModBlocks.ORANGE_TREE_WOOD);
-        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_ORANGE_TREE_LOG).log(ModBlocks.STRIPPED_ORANGE_TREE_LOG).wood(ModBlocks.STRIPPED_ORANGE_TREE_WOOD);
-
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ORANGE_TREE_PLANKS);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ORANGE_TREE_LEAVES);
-
-        blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.ORANGE_TREE_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerLog(ModBlocks.ORANGE_LOG).log(ModBlocks.ORANGE_LOG).wood(ModBlocks.ORANGE_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_ORANGE_LOG).log(ModBlocks.STRIPPED_ORANGE_LOG).wood(ModBlocks.STRIPPED_ORANGE_WOOD);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ORANGE_PLANKS);
+//        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ORANGE_LEAVES);
+        blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.ORANGE_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
     }
 
     @Override
@@ -41,7 +39,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.STRAWBERRY_SANDWICH, Models.GENERATED);
         itemModelGenerator.register(ModItems.SLICE_OF_BREAD, Models.GENERATED);
         itemModelGenerator.register(ModItems.FRUIT_SANDWICH, Models.GENERATED);
-        itemModelGenerator.register(ModBlocks.ORANGE_TREE_SAPLING.asItem(), Models.GENERATED);
+        itemModelGenerator.register(ModBlocks.ORANGE_SAPLING.asItem(), Models.GENERATED);
 
     }
 }

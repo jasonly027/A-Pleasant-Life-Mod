@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "pleasant-life:block/orange_tree_log",
-    "side": "pleasant-life:block/orange_tree_log"
-  }
-}

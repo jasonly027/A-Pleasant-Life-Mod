@@ -4,7 +4,7 @@ import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 
 public class ModStrippableBlockRegistry {
     public static void registerStrippableBlock() {
-        StrippableBlockRegistry.register(ModBlocks.ORANGE_TREE_LOG, ModBlocks.STRIPPED_ORANGE_TREE_LOG);
-        StrippableBlockRegistry.register(ModBlocks.ORANGE_TREE_WOOD, ModBlocks.STRIPPED_ORANGE_TREE_WOOD);
+        StrippableBlockRegistry.register(ModBlocks.ORANGE_LOG, ModBlocks.STRIPPED_ORANGE_LOG);
+        StrippableBlockRegistry.register(ModBlocks.ORANGE_WOOD, ModBlocks.STRIPPED_ORANGE_WOOD);
     }
 }
