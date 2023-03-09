@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "powered=false": { "model": "pleasant-life:block/kiwi_pressure_plate" },
+    "powered=true": { "model": "pleasant-life:block/kiwi_pressure_plate_down" }
+  }
+}

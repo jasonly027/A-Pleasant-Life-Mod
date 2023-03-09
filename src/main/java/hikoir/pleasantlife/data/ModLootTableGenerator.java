@@ -33,14 +33,28 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.STRIPPED_ORANGE_LOG);
         addDrop(ModBlocks.STRIPPED_ORANGE_WOOD);
         addDrop(ModBlocks.ORANGE_PLANKS);
-        addDrop(ModBlocks.ORANGE_SAPLING);
         addDrop(ModBlocks.ORANGE_LEAVES, fruitLeavesDrops(ModBlocks.ORANGE_LEAVES, ModBlocks.ORANGE_SAPLING, ModItems.ORANGE, SAPLING_DROP_CHANCE));
+        addDrop(ModBlocks.ORANGE_SAPLING);
         addDrop(ModBlocks.ORANGE_BUTTON);
         addDrop(ModBlocks.ORANGE_PRESSURE_PLATE);
         addDrop(ModBlocks.ORANGE_FENCE);
         addDrop(ModBlocks.ORANGE_FENCE_GATE);
         addDrop(ModBlocks.ORANGE_SLAB);
         addDrop(ModBlocks.ORANGE_STAIRS);
+
+        addDrop(ModBlocks.KIWI_LOG);
+        addDrop(ModBlocks.KIWI_WOOD);
+        addDrop(ModBlocks.STRIPPED_KIWI_LOG);
+        addDrop(ModBlocks.STRIPPED_KIWI_WOOD);
+        addDrop(ModBlocks.KIWI_PLANKS);
+        addDrop(ModBlocks.KIWI_LEAVES, fruitLeavesDrops(ModBlocks.KIWI_LEAVES, ModBlocks.KIWI_SAPLING, ModItems.KIWI, SAPLING_DROP_CHANCE));
+        addDrop(ModBlocks.KIWI_SAPLING);
+        addDrop(ModBlocks.KIWI_BUTTON);
+        addDrop(ModBlocks.KIWI_PRESSURE_PLATE);
+        addDrop(ModBlocks.KIWI_FENCE);
+        addDrop(ModBlocks.KIWI_FENCE_GATE);
+        addDrop(ModBlocks.KIWI_SLAB);
+        addDrop(ModBlocks.KIWI_STAIRS);
     }
 
     private static final LootCondition.Builder WITH_SILK_TOUCH = MatchToolLootCondition.builder(ItemPredicate.Builder.create().enchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, NumberRange.IntRange.atLeast(1))));

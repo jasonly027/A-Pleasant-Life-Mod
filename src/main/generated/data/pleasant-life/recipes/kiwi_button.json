@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "pleasant-life:kiwi_planks"
+    }
+  ],
+  "result": {
+    "item": "pleasant-life:kiwi_button"
+  }
+}

@@ -21,6 +21,7 @@ import net.minecraft.util.Identifier;
 public class ModBlocks {
     public static final Block STRAWBERRY_BUSH = registerBlockWithoutItem("strawberry_bush",
             new StrawberryBushBlock(AbstractBlock.Settings.of(Material.PLANT).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH)));
+
     public static final Block ORANGE_LOG = registerBlock("orange_log",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)), ModItemGroup.PLEASANTLIFE);
     public static final Block ORANGE_WOOD = registerBlock("orange_wood",
@@ -47,6 +48,35 @@ public class ModBlocks {
             new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB)), ModItemGroup.PLEASANTLIFE);
     public static final Block ORANGE_STAIRS = registerBlock("orange_stairs",
             new StairsBlock(ModBlocks.ORANGE_PLANKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_STAIRS)), ModItemGroup.PLEASANTLIFE);
+
+    public static final Block KIWI_LOG = registerBlock("kiwi_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)), ModItemGroup.PLEASANTLIFE);
+    public static final Block KIWI_WOOD = registerBlock("kiwi_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD)), ModItemGroup.PLEASANTLIFE);
+    public static final Block STRIPPED_KIWI_LOG = registerBlock("stripped_kiwi_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG)), ModItemGroup.PLEASANTLIFE);
+    public static final Block STRIPPED_KIWI_WOOD = registerBlock("stripped_kiwi_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD)), ModItemGroup.PLEASANTLIFE);
+    public static final Block KIWI_PLANKS = registerBlock("kiwi_planks",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)), ModItemGroup.PLEASANTLIFE);
+    public static final Block KIWI_LEAVES = registerBlock("kiwi_leaves",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)), ModItemGroup.PLEASANTLIFE);
+    public static final Block KIWI_SAPLING = registerBlock("kiwi_sapling",
+            new SaplingBlock(new OrangeSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), ModItemGroup.PLEASANTLIFE);
+    public static final Block KIWI_BUTTON = registerBlock("kiwi_button",
+            new ButtonBlock(FabricBlockSettings.copyOf(Blocks.OAK_BUTTON), 30, true, SoundEvents.BLOCK_WOODEN_BUTTON_CLICK_OFF, SoundEvents.BLOCK_WOODEN_BUTTON_CLICK_ON), ModItemGroup.PLEASANTLIFE);
+    public static final Block KIWI_PRESSURE_PLATE = registerBlock("kiwi_pressure_plate",
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.OAK_PRESSURE_PLATE), SoundEvents.BLOCK_WOODEN_PRESSURE_PLATE_CLICK_OFF, SoundEvents.BLOCK_WOODEN_PRESSURE_PLATE_CLICK_ON), ModItemGroup.PLEASANTLIFE);
+    public static final Block KIWI_FENCE = registerBlock("kiwi_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE)), ModItemGroup.PLEASANTLIFE);
+    public static final Block KIWI_FENCE_GATE = registerBlock("kiwi_fence_gate",
+            new FenceGateBlock((FabricBlockSettings.copyOf(Blocks.OAK_FENCE_GATE)), SoundEvents.BLOCK_FENCE_GATE_CLOSE, SoundEvents.BLOCK_FENCE_GATE_OPEN), ModItemGroup.PLEASANTLIFE);
+    public static final Block KIWI_SLAB = registerBlock("kiwi_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB)), ModItemGroup.PLEASANTLIFE);
+    public static final Block KIWI_STAIRS = registerBlock("kiwi_stairs",
+            new StairsBlock(ModBlocks.KIWI_PLANKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_STAIRS)), ModItemGroup.PLEASANTLIFE);
+
+
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);

@@ -18,11 +18,11 @@ public class ModLangGenerator extends FabricLanguageProvider {
         translationBuilder.add(ModItems.GOLDEN_KNIFE, "Golden Knife");
         translationBuilder.add(ModItems.DIAMOND_KNIFE, "Diamond Knife");
         translationBuilder.add(ModItems.NETHERITE_KNIFE, "Netherite Knife");
+
         translationBuilder.add(ModItems.STRAWBERRY, "Strawberry");
         translationBuilder.add(ModItems.STRAWBERRY_SEEDS, "Strawberry Seeds");
-        translationBuilder.add(ModItems.KIWI, "Kiwi");
-        translationBuilder.add(ModItems.KIWI_SLICE, "Kiwi slice");
         translationBuilder.add(ModItems.STRAWBERRY_SANDWICH, "Strawberry Sandwich");
+
         translationBuilder.add(ModItems.SLICE_OF_BREAD, "Slice of Bread");
         translationBuilder.add(ModItems.FRUIT_SANDWICH, "Fruit Sandwich");
 
@@ -41,6 +41,22 @@ public class ModLangGenerator extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.ORANGE_FENCE_GATE, "Orange Fence Gate");
         translationBuilder.add(ModBlocks.ORANGE_SLAB, "Orange Slab");
         translationBuilder.add(ModBlocks.ORANGE_STAIRS, "Orange Stairs");
+
+        translationBuilder.add(ModItems.KIWI, "Kiwi");
+        translationBuilder.add(ModItems.KIWI_SLICE, "Kiwi slice");
+        translationBuilder.add(ModBlocks.KIWI_LOG, "Kiwi Log");
+        translationBuilder.add(ModBlocks.KIWI_WOOD, "Kiwi Wood");
+        translationBuilder.add(ModBlocks.STRIPPED_KIWI_LOG, "Stripped Kiwi Log");
+        translationBuilder.add(ModBlocks.STRIPPED_KIWI_WOOD, "Stripped Kiwi Wood");
+        translationBuilder.add(ModBlocks.KIWI_PLANKS, "Kiwi Planks");
+        translationBuilder.add(ModBlocks.KIWI_LEAVES, "Kiwi Leaves");
+        translationBuilder.add(ModBlocks.KIWI_SAPLING, "Kiwi Sapling");
+        translationBuilder.add(ModBlocks.KIWI_BUTTON, "Kiwi Button");
+        translationBuilder.add(ModBlocks.KIWI_PRESSURE_PLATE, "Kiwi Pressure Plate");
+        translationBuilder.add(ModBlocks.KIWI_FENCE, "Kiwi Fence");
+        translationBuilder.add(ModBlocks.KIWI_FENCE_GATE, "Kiwi Fence Gate");
+        translationBuilder.add(ModBlocks.KIWI_SLAB, "Kiwi Slab");
+        translationBuilder.add(ModBlocks.KIWI_STAIRS, "Kiwi Stairs");
 
     }
 }

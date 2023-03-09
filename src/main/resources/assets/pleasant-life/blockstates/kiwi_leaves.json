@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "": [
+
+      {
+        "model": "pleasant-life:block/kiwi_leaves0",
+        "weight": 10
+      },
+      {
+        "model": "pleasant-life:block/kiwi_leaves1",
+        "weight": 6
+      },
+      {
+        "model": "pleasant-life:block/kiwi_leaves2",
+        "weight": 4
+      }
+    ]
+  }
+}

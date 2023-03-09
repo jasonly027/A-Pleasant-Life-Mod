@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "pleasant-life:block/kiwi_planks",
+    "top": "pleasant-life:block/kiwi_planks",
+    "side": "pleasant-life:block/kiwi_planks"
+  }
+}
