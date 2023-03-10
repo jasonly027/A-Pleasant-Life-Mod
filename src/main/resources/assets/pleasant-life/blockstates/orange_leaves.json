@@ -3,16 +3,64 @@
     "": [
 
       {
-        "model": "pleasant-life:block/orange_leaves0",
+        "model": "pleasant-life:block/orange_leaves_0_0",
+        "weight": 120
+      },
+      {
+        "model": "pleasant-life:block/orange_leaves_0_0_r",
+        "weight": 120
+      },
+      {
+        "model": "pleasant-life:block/orange_leaves_0_1",
+        "weight": 20
+      },
+      {
+        "model": "pleasant-life:block/orange_leaves_0_1_r",
+        "weight": 20
+      },
+
+
+      {
+        "model": "pleasant-life:block/orange_leaves_1_0",
+        "weight": 80
+      },
+      {
+        "model": "pleasant-life:block/orange_leaves_1_0_r",
+        "weight": 80
+      },
+      {
+        "model": "pleasant-life:block/orange_leaves_1_1",
+        "weight": 40
+      },
+      {
+        "model": "pleasant-life:block/orange_leaves_1_1_r",
+        "weight": 40
+      },
+      {
+        "model": "pleasant-life:block/orange_leaves_1_2",
         "weight": 10
       },
       {
-        "model": "pleasant-life:block/orange_leaves1",
-        "weight": 6
+        "model": "pleasant-life:block/orange_leaves_1_2_r",
+        "weight": 10
+      },
+
+
+      {
+        "model": "pleasant-life:block/orange_leaves_2_1",
+        "weight": 5
       },
       {
-        "model": "pleasant-life:block/orange_leaves2",
-        "weight": 4
+        "model": "pleasant-life:block/orange_leaves_2_1_r",
+        "weight": 5
+      },
+      {
+        "model": "pleasant-life:block/orange_leaves_2_2",
+        "weight": 3
+      },
+      {
+        "model": "pleasant-life:block/orange_leaves_2_2_r",
+        "weight": 3
       }
     ]
   }
