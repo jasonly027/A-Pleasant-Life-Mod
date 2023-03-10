@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "pleasant-life:block/kiwi_leaves_k1_0",
+    "side": "pleasant-life:block/kiwi_leaves_k2_0"
+  }
+}

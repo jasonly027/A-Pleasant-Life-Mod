@@ -27,7 +27,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(ModItems.STRAWBERRY))
                 .offerTo(exporter, FabricRecipeProvider.getRecipeName(ModItems.STRAWBERRY_SEEDS));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.STRAWBERRY_SANDWICH)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.STRAWBERRY_SANDWICH, 2)
                 .pattern(" B ")
                 .pattern("SSS")
                 .pattern(" B ")
@@ -39,7 +39,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(ModItems.SLICE_OF_BREAD))
                 .offerTo(exporter, FabricRecipeProvider.getRecipeName(ModItems.STRAWBERRY_SANDWICH));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.FRUIT_SANDWICH)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.FRUIT_SANDWICH, 2)
                 .pattern(" B ")
                 .pattern("SOK")
                 .pattern(" B ")

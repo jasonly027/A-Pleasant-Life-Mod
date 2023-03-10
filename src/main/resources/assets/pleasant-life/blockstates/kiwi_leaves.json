@@ -3,16 +3,68 @@
     "": [
 
       {
-        "model": "pleasant-life:block/kiwi_leaves0",
+        "model": "pleasant-life:block/kiwi_leaves_0_0",
+        "weight": 650
+      },
+      {
+        "model": "pleasant-life:block/kiwi_leaves_0_1",
         "weight": 10
       },
       {
-        "model": "pleasant-life:block/kiwi_leaves1",
-        "weight": 6
+        "model": "pleasant-life:block/kiwi_leaves_0_1_r",
+        "weight": 10
+      },
+
+
+      {
+        "model": "pleasant-life:block/kiwi_leaves_1_0",
+        "weight": 50
       },
       {
-        "model": "pleasant-life:block/kiwi_leaves2",
-        "weight": 4
+        "model": "pleasant-life:block/kiwi_leaves_1_0_r",
+        "weight": 50
+      },
+      {
+        "model": "pleasant-life:block/kiwi_leaves_1_1",
+        "weight": 20
+      },
+      {
+        "model": "pleasant-life:block/kiwi_leaves_1_1_r",
+        "weight": 20
+      },
+      {
+        "model": "pleasant-life:block/kiwi_leaves_1_2",
+        "weight": 5
+      },
+      {
+        "model": "pleasant-life:block/kiwi_leaves_1_2_r",
+        "weight": 5
+      },
+
+
+      {
+        "model": "pleasant-life:block/kiwi_leaves_2_0",
+        "weight": 5
+      },
+      {
+        "model": "pleasant-life:block/kiwi_leaves_2_0_r",
+        "weight": 5
+      },
+      {
+        "model": "pleasant-life:block/kiwi_leaves_2_1",
+        "weight": 5
+      },
+      {
+        "model": "pleasant-life:block/kiwi_leaves_2_1_r",
+        "weight": 5
+      },
+      {
+        "model": "pleasant-life:block/kiwi_leaves_2_2",
+        "weight": 3
+      },
+      {
+        "model": "pleasant-life:block/kiwi_leaves_2_2_r",
+        "weight": 3
       }
     ]
   }

@@ -3,8 +3,12 @@
     "": [
 
       {
+        "model": "pleasant-life:block/orange_leaves_blank",
+        "weight": 400
+      },
+      {
         "model": "pleasant-life:block/orange_leaves_0_0",
-        "weight": 120
+        "weight": 400
       },
       {
         "model": "pleasant-life:block/orange_leaves_0_0_r",
