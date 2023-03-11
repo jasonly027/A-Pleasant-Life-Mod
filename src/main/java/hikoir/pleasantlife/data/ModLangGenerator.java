@@ -58,5 +58,7 @@ public class ModLangGenerator extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.KIWI_SLAB, "Kiwi Slab");
         translationBuilder.add(ModBlocks.KIWI_STAIRS, "Kiwi Stairs");
 
+        translationBuilder.add(ModBlocks.SKILLET, "Skillet");
+
     }
 }

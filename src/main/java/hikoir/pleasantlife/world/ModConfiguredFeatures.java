@@ -33,7 +33,7 @@ public class ModConfiguredFeatures {
 
         register(context, KIWI_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.KIWI_LOG),
-                new BendingTrunkPlacer(3,1,0, 1, UniformIntProvider.create(0, 0)),
+                new BendingTrunkPlacer(4,1,0, 3, UniformIntProvider.create(1,2)),
                 BlockStateProvider.of(ModBlocks.KIWI_LEAVES),
                 new RandomSpreadFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), ConstantIntProvider.create(2), 50),
                 new TwoLayersFeatureSize(1, 0, 1)).build());

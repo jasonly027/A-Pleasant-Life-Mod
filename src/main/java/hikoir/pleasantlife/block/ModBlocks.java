@@ -1,6 +1,7 @@
 package hikoir.pleasantlife.block;
 
 import hikoir.pleasantlife.PleasantLife;
+import hikoir.pleasantlife.block.custom.SkilletBlock;
 import hikoir.pleasantlife.block.custom.StrawberryBushBlock;
 import hikoir.pleasantlife.item.ModItemGroup;
 import hikoir.pleasantlife.world.tree.KiwiSaplingGenerator;
@@ -9,7 +10,6 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
-import net.minecraft.entity.vehicle.BoatEntity;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -77,6 +77,8 @@ public class ModBlocks {
     public static final Block KIWI_STAIRS = registerBlock("kiwi_stairs",
             new StairsBlock(ModBlocks.KIWI_PLANKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_STAIRS)), ModItemGroup.PLEASANTLIFE);
 
+    public static final Block SKILLET = registerBlock("skillet",
+            new SkilletBlock(FabricBlockSettings.of(Material.METAL).strength(1.5f).nonOpaque().noBlockBreakParticles()), ModItemGroup.PLEASANTLIFE);
 
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {

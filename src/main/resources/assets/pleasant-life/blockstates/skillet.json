@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "pleasant-life:block/skillet"
+    },
+    "facing=south": {
+      "model": "pleasant-life:block/skillet",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "pleasant-life:block/skillet",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "pleasant-life:block/skillet",
+      "y": 90
+    }
+  }
+}
