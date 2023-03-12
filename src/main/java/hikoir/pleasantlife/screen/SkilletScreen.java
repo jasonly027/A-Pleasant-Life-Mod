@@ -11,7 +11,7 @@ import net.minecraft.util.Identifier;
 
 public class SkilletScreen extends HandledScreen<SkilletScreenHandler> {
     private static final Identifier TEXTURE =
-            new Identifier(PleasantLife.MOD_ID, "textures/gui/temp_gui.png");
+            new Identifier(PleasantLife.MOD_ID, "textures/gui/skillet_gui.png");
 
     public SkilletScreen(SkilletScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
@@ -37,8 +37,12 @@ public class SkilletScreen extends HandledScreen<SkilletScreenHandler> {
 
     private void renderProgressArrow(MatrixStack matrices, int x, int y) {
         if(handler.isCrafting()) {
-            drawTexture(matrices, x + 105, y + 33, 176, 0, 8, handler.getScaledProgress());
+            drawTexture(matrices, x + 96, y + 37, 176, 14, handler.getScaledProgress(), 17);
         }
+    }
+
+    private void renderFlames(MatrixStack matrices, int x, int y) {
+
     }
 
     @Override
