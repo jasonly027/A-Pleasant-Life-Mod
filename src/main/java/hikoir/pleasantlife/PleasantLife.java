@@ -3,10 +3,12 @@ package hikoir.pleasantlife;
 import hikoir.pleasantlife.block.ModBlocks;
 import hikoir.pleasantlife.block.ModFlammableBlockRegistry;
 import hikoir.pleasantlife.block.ModStrippableBlockRegistry;
+import hikoir.pleasantlife.block.entity.ModBlockEntities;
 import hikoir.pleasantlife.item.ModCompostableRegistry;
 import hikoir.pleasantlife.item.ModFuelRegistry;
 import hikoir.pleasantlife.item.ModItemGroup;
 import hikoir.pleasantlife.item.ModItems;
+import hikoir.pleasantlife.screen.ModScreenHandler;
 import hikoir.pleasantlife.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
@@ -29,5 +31,9 @@ public class PleasantLife implements ModInitializer {
 		ModStrippableBlockRegistry.registerStrippableBlock();
 		ModCompostableRegistry.registerCompostableBlock();
 		ModFuelRegistry.registerFuel();
+
+		ModBlockEntities.registerBlockEntities();
+
+		ModScreenHandler.registerAllScreenHandlers();
 	}
 }

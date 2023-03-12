@@ -78,7 +78,7 @@ public class ModBlocks {
             new StairsBlock(ModBlocks.KIWI_PLANKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_STAIRS)), ModItemGroup.PLEASANTLIFE);
 
     public static final Block SKILLET = registerBlock("skillet",
-            new SkilletBlock(FabricBlockSettings.of(Material.METAL).strength(1.5f).nonOpaque().noBlockBreakParticles()), ModItemGroup.PLEASANTLIFE);
+            new SkilletBlock(FabricBlockSettings.of(Material.METAL).strength(1.5f).nonOpaque()), ModItemGroup.PLEASANTLIFE);
 
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
