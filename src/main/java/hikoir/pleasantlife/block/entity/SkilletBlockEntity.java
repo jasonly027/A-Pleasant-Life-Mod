@@ -3,6 +3,8 @@ package hikoir.pleasantlife.block.entity;
 import hikoir.pleasantlife.item.ModItems;
 import hikoir.pleasantlife.screen.SkilletScreenHandler;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.Material;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -11,9 +13,13 @@ import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
+import net.minecraft.state.property.BooleanProperty;
+import net.minecraft.state.property.Properties;
+import net.minecraft.state.property.Property;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
@@ -90,7 +96,11 @@ public class SkilletBlockEntity extends BlockEntity implements NamedScreenHandle
             return;
         }
 
-        if (hasRecipe(entity))
+//        if (isHeated(world, blockPos, blockState, entity)) {
+//
+//        }
+
+        if (hasRecipe(entity) && isHeated(world, blockPos))
         {
             entity.progress++;
             markDirty(world,blockPos, blockState);
@@ -104,6 +114,14 @@ public class SkilletBlockEntity extends BlockEntity implements NamedScreenHandle
             entity.resetProgress();
             markDirty(world, blockPos, blockState);
         }
+    }
+
+    private static boolean isHeated(World world, BlockPos blockPos) {
+        BlockState underBlock = world.getBlockState(blockPos.down());
+        Material underBlockMaterial = underBlock.getMaterial();
+
+        return underBlock.isIn(BlockTags.FIRE) || underBlock.isIn(BlockTags.CAMPFIRES) ||
+                underBlockMaterial == Material.LAVA || underBlock.isOf(Blocks.MAGMA_BLOCK);
     }
 
     private static void craftItem(SkilletBlockEntity entity) {

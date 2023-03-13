@@ -8,7 +8,10 @@ import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.screen.NamedScreenHandlerFactory;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
@@ -16,6 +19,7 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.util.*;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
@@ -27,6 +31,7 @@ public class SkilletBlock extends BlockWithEntity implements BlockEntityProvider
 
     public SkilletBlock(Settings settings) {
         super(settings);
+        this.setDefaultState(this.getStateManager().getDefaultState().with(LIT, false));
     }
 
     private static final VoxelShape SHAPE = Block.createCuboidShape(2,0,2,14,3,14);
@@ -87,6 +92,26 @@ public class SkilletBlock extends BlockWithEntity implements BlockEntityProvider
         }
 
         return ActionResult.SUCCESS;
+    }
+
+    @Override
+    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
+        if (!state.get(LIT)) {
+            return;
+        }
+
+        if (random.nextDouble() < 0.1) {
+            // TODO CUSTOM SUBTITLE
+            world.playSoundAtBlockCenter(pos, SoundEvents.BLOCK_FURNACE_FIRE_CRACKLE, SoundCategory.BLOCKS, 1.0f, 1.0f, false);
+        }
+
+        double variance = random.nextDouble() * 0.6 - 0.3;
+        double smokeX = pos.getX() + 0.5 + variance;
+        double smokeY = pos.getY() + 0.1 + variance;
+        double smokeZ = pos.getZ() + 0.5 + variance;
+
+        world.addParticle(ParticleTypes.SMOKE, smokeX, smokeY, smokeZ,
+                0.0, 0.0, 0.0);
     }
 
     @Nullable
