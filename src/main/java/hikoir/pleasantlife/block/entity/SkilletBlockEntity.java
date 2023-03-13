@@ -2,6 +2,7 @@ package hikoir.pleasantlife.block.entity;
 
 import hikoir.pleasantlife.block.custom.SkilletBlock;
 import hikoir.pleasantlife.item.ModItems;
+import hikoir.pleasantlife.recipe.SkilletRecipe;
 import hikoir.pleasantlife.screen.SkilletScreenHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -23,6 +24,9 @@ import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+
+import java.util.Optional;
+
 import org.jetbrains.annotations.Nullable;
 
 public class SkilletBlockEntity extends BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory {
@@ -168,10 +172,13 @@ public class SkilletBlockEntity extends BlockEntity implements NamedScreenHandle
             inventory.setStack(i, entity.getStack(i));
         }
 
+        Optional<SkilletRecipe> recipe = entity.getWorld().getRecipeManager()
+        		.getFirstMatch(SkilletRecipe.Type.INSTANCE, inventory, entity.getWorld());
+        
         if (hasRecipe(entity))
         {
             entity.removeStack(1,1);
-            entity.setStack(2, new ItemStack(ModItems.ORANGE, entity.getStack(2).getCount() + 1));
+            entity.setStack(2, new ItemStack(recipe.get().getOutput().getItem(), recipe.get().getOutput().getCount()));
             entity.resetProgress();
         }
     }
@@ -182,10 +189,11 @@ public class SkilletBlockEntity extends BlockEntity implements NamedScreenHandle
             inventory.setStack(i, entity.getStack(i));
         }
 
-        boolean hasKiwiInFirstSlot = entity.getStack(1).getItem() == ModItems.KIWI;
+        Optional<SkilletRecipe> match = entity.getWorld().getRecipeManager()
+        		.getFirstMatch(SkilletRecipe.Type.INSTANCE, inventory, entity.getWorld());
 
-        return hasKiwiInFirstSlot && canInsertAmountIntoOutputSlot(inventory)
-                && canInsertItemIntoOutputSlot(inventory, ModItems.ORANGE);
+        return match.isPresent() && canInsertAmountIntoOutputSlot(inventory)
+                && canInsertItemIntoOutputSlot(inventory, match.get().getOutput().getItem());
     }
 
     private static boolean canInsertItemIntoOutputSlot(SimpleInventory inventory, Item output) {

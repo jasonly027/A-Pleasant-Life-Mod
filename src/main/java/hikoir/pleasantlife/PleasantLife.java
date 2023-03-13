@@ -8,6 +8,7 @@ import hikoir.pleasantlife.item.ModCompostableRegistry;
 import hikoir.pleasantlife.item.ModFuelRegistry;
 import hikoir.pleasantlife.item.ModItemGroup;
 import hikoir.pleasantlife.item.ModItems;
+import hikoir.pleasantlife.recipe.ModRecipes;
 import hikoir.pleasantlife.screen.ModScreenHandler;
 import hikoir.pleasantlife.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
@@ -35,5 +36,6 @@ public class PleasantLife implements ModInitializer {
 		ModBlockEntities.registerBlockEntities();
 
 		ModScreenHandler.registerAllScreenHandlers();
+		ModRecipes.registerRecipes();
 	}
 }
