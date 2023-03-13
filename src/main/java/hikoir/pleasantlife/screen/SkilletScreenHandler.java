@@ -15,7 +15,7 @@ public class SkilletScreenHandler extends ScreenHandler {
     private final PropertyDelegate propertyDelegate;
 
     public SkilletScreenHandler(int syncId, PlayerInventory inventory) {
-        this(syncId, inventory, new SimpleInventory(11), new ArrayPropertyDelegate(2));
+        this(syncId, inventory, new SimpleInventory(11), new ArrayPropertyDelegate(4));
     }
 
     public SkilletScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory, PropertyDelegate delegate) {
@@ -60,9 +60,17 @@ public class SkilletScreenHandler extends ScreenHandler {
     public int getScaledProgress() {
         int progress = this.propertyDelegate.get(0);
         int maxProgress = this.propertyDelegate.get(1);  // Max Progress
-        int progressArrowSize = 26; // This is the width in pixels of your arrow
+        int progressArrowSize = 24; // This is the width in pixels of your arrow
 
         return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
+    }
+
+    public int getScaledBurning() {
+        int burning = this.propertyDelegate.get(2);
+        int maxBurning = this.propertyDelegate.get(3);  // Max Progress
+        int burningFlameSize = 14; // This is the width in pixels of your arrow
+
+        return maxBurning != 0 && burning != 0 ? burning * burningFlameSize / maxBurning : 0;
     }
 
     @Override

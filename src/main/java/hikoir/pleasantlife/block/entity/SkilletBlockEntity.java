@@ -1,7 +1,9 @@
 package hikoir.pleasantlife.block.entity;
 
+import hikoir.pleasantlife.block.custom.SkilletBlock;
 import hikoir.pleasantlife.item.ModItems;
 import hikoir.pleasantlife.screen.SkilletScreenHandler;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
@@ -17,9 +19,6 @@ import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
-import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.state.property.Properties;
-import net.minecraft.state.property.Property;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
@@ -32,27 +31,33 @@ public class SkilletBlockEntity extends BlockEntity implements NamedScreenHandle
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
     private int maxProgress = 72;
+    private int burning = 0;
+    private int maxBurning = 100;
 
     public SkilletBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.SKILLET, pos, state);
         this.propertyDelegate = new PropertyDelegate() {
             public int get(int index) {
-                switch (index) {
-                    case 0: return SkilletBlockEntity.this.progress;
-                    case 1: return SkilletBlockEntity.this.maxProgress;
-                    default: return 0;
-                }
+                return switch (index) {
+                    case 0 -> SkilletBlockEntity.this.progress;
+                    case 1 -> SkilletBlockEntity.this.maxProgress;
+                    case 2 -> SkilletBlockEntity.this.burning;
+                    case 3 -> SkilletBlockEntity.this.maxBurning;
+                    default -> 0;
+                };
             }
 
             public void set(int index, int value) {
                 switch (index) {
-                    case 0: SkilletBlockEntity.this.progress = value; break;
-                    case 1: SkilletBlockEntity.this.maxProgress = value; break;
+                    case 0 -> SkilletBlockEntity.this.progress = value;
+                    case 1 -> SkilletBlockEntity.this.maxProgress = value;
+                    case 2 -> SkilletBlockEntity.this.burning = value;
+                    case 3 -> SkilletBlockEntity.this.maxBurning = value;
                 }
             }
 
             public int size() {
-                return 2;
+                return 4;
             }
         };
     }
@@ -78,6 +83,7 @@ public class SkilletBlockEntity extends BlockEntity implements NamedScreenHandle
         super.writeNbt(nbt);
         Inventories.writeNbt(nbt, inventory);
         nbt.putInt("skillet.progress", progress);
+        nbt.putInt("skillet.burning", burning);
     }
 
     @Override
@@ -85,10 +91,27 @@ public class SkilletBlockEntity extends BlockEntity implements NamedScreenHandle
         Inventories.readNbt(nbt, inventory);
         super.readNbt(nbt);
         progress = nbt.getInt("skillet.progress");
+        burning = nbt.getInt("skillet.burning");
     }
 
     private void resetProgress() {
         this.progress = 0;
+    }
+
+    private void decrementProgress() {
+        if (this.progress > 0) {
+            --this.progress;
+        }
+    }
+
+    private void maxOutBurning() {
+        this.burning = this.maxBurning;
+    }
+
+    private void decrementBurning() {
+        if (this.burning > 0) {
+            --this.burning;
+        }
     }
 
     public static void tick(World world, BlockPos blockPos, BlockState blockState, SkilletBlockEntity entity) {
@@ -96,17 +119,32 @@ public class SkilletBlockEntity extends BlockEntity implements NamedScreenHandle
             return;
         }
 
-//        if (isHeated(world, blockPos, blockState, entity)) {
-//
-//        }
+        boolean isHeated = isHeated(world, blockPos);
 
-        if (hasRecipe(entity) && isHeated(world, blockPos))
+        if (isHeated) {
+            entity.maxOutBurning();
+        }
+        else {
+            entity.decrementBurning();
+        }
+
+        BlockState newState = blockState.with(SkilletBlock.LIT, isHeated);
+        world.setBlockState(blockPos, newState, Block.NOTIFY_ALL);
+
+        if (hasRecipe(entity))
         {
-            entity.progress++;
-            markDirty(world,blockPos, blockState);
-            if (entity.progress >= entity.maxProgress)
+            if (entity.burning > 0)
             {
-                craftItem(entity);
+                entity.progress++;
+                markDirty(world,blockPos, blockState);
+                if (entity.progress >= entity.maxProgress)
+                {
+                    craftItem(entity);
+                }
+            }
+            else
+            {
+                entity.decrementProgress();
             }
         }
         else

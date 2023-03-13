@@ -32,17 +32,20 @@ public class SkilletScreen extends HandledScreen<SkilletScreenHandler> {
         int y = (height - backgroundHeight) / 2;
         drawTexture(matrices, x, y, 0, 0, backgroundWidth, backgroundHeight);
 
+        renderFlames(matrices, x , y);
+
         renderProgressArrow(matrices, x, y);
     }
 
     private void renderProgressArrow(MatrixStack matrices, int x, int y) {
         if(handler.isCrafting()) {
-            drawTexture(matrices, x + 96, y + 37, 176, 14, handler.getScaledProgress(), 17);
+            drawTexture(matrices, x + 96, y + 36, 176, 14, handler.getScaledProgress(), 17);
         }
     }
 
     private void renderFlames(MatrixStack matrices, int x, int y) {
-
+        int k = handler.getScaledBurning();
+        drawTexture(matrices, x + 101, y + 55 + 12 - k, 176, 12 - k, 14, k);
     }
 
     @Override
